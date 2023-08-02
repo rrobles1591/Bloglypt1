@@ -1,0 +1,14 @@
+<h1>Welcome, {{user.first_name}}</h1>
+
+<p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+<p>{{user.image_url}}</p>
+
+<a href="/">Go back</a><br><br>
+
+<a href="/users/{{user.id}}/edit"><button>Edit</button></a>
+<!-- <a href="/users/{{user.id}}/delete" method="POST"><button>Delete</button></a> -->
+<form>
+    <button 
+    formaction="/users/{{ user.id }}/delete"
+    formmethod="POST">Delete></button>
+</form>
